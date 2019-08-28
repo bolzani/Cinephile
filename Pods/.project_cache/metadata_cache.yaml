@@ -1,0 +1,24 @@
+Alamofire:
+  LABEL: Alamofire
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/Alamofire.xcodeproj"
+  UUID: 81B7E9B7CD0CADA087A4BB042FBA92E7
+Arrow:
+  LABEL: Arrow
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/Arrow.xcodeproj"
+  UUID: 60E635DDB6D785E90886F89079A19FCB
+Pods-Cinephile:
+  LABEL: Pods-Cinephile
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/Pods.xcodeproj"
+  UUID: 3EFF88A98280F2DBDC1FBEC82292D9C3
+SDWebImage:
+  LABEL: SDWebImage
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/SDWebImage.xcodeproj"
+  UUID: 4ECF4E662EEBE4FA58102FF984D920CC
+thenPromise:
+  LABEL: thenPromise
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/thenPromise.xcodeproj"
+  UUID: 4AD1BEDF1330E8A96AEA28149661A723
+ws:
+  LABEL: ws
+  PROJECT_PATH: "/Users/falves/projetos/ios/_pessoais/Cinephile/Pods/ws.xcodeproj"
+  UUID: 448A4F85818EFFA72CD7E1694667F687

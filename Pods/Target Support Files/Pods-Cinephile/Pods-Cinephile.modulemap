@@ -1,0 +1,6 @@
+module Pods_Cinephile {
+  umbrella header "Pods-Cinephile-umbrella.h"
+
+  export *
+  module * { export * }
+}

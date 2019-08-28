@@ -1,0 +1,40 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  Alamofire:
+    BUILD_SETTINGS_CHECKSUM:
+      Alamofire: 3416d9f73f075576e6b454c83ae72f8e
+    CHECKSUM: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+    SPECS:
+      - Alamofire (4.8.2)
+  Arrow:
+    BUILD_SETTINGS_CHECKSUM:
+      Arrow: 63dcd2a002fe324474393302952a3828
+    CHECKSUM: ac60441ee99f2e648e441d4ee8b29fe1d65fbe75
+    SPECS:
+      - Arrow (5.0.0)
+  Pods-Cinephile:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: a1b8787174239bb09613b1638ac30d23
+      Release: a1b8787174239bb09613b1638ac30d23
+  SDWebImage:
+    BUILD_SETTINGS_CHECKSUM:
+      SDWebImage: 95424e9ff6a07051a5b7f92e42fe5e2f
+    CHECKSUM: fb387001955223213dde14bc08c8b73f371f8d8f
+    SPECS:
+      - SDWebImage (5.1.0)
+      - SDWebImage/Core (5.1.0)
+  thenPromise:
+    BUILD_SETTINGS_CHECKSUM:
+      thenPromise: 6f54651f5f56a89254c6b933f789b728
+    CHECKSUM: 02f1650627feed7b0e2e6a815bc04a168c9f9ede
+    SPECS:
+      - thenPromise (5.0.0)
+  ws:
+    BUILD_SETTINGS_CHECKSUM:
+      ws: 1f0617595b81436c91349a15a59a79b7
+    CHECKSUM: ded0903a44c989593ea028cbe97d6249dfad998c
+    SPECS:
+      - ws (5.0.0)
+OBJECT_VERSION: 50

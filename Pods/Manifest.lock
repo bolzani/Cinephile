@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Arrow (5.0.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
+  - thenPromise (5.0.0)
+  - ws (5.0.0):
+    - Alamofire (~> 4.8.2)
+    - Arrow (~> 5.0.0)
+    - thenPromise (~> 5.0.0)
+
+DEPENDENCIES:
+  - Arrow
+  - SDWebImage
+  - thenPromise (= 5.0.0)
+  - ws
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Arrow
+    - SDWebImage
+    - thenPromise
+    - ws
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Arrow: ac60441ee99f2e648e441d4ee8b29fe1d65fbe75
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+  thenPromise: 02f1650627feed7b0e2e6a815bc04a168c9f9ede
+  ws: ded0903a44c989593ea028cbe97d6249dfad998c
+
+PODFILE CHECKSUM: a0371060ad0d6fe2737d99c97d23465e6607e03c
+
+COCOAPODS: 1.7.5
