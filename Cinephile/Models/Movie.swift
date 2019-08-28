@@ -26,7 +26,7 @@ struct Movie {
     var overview: String = ""
     var releaseDate: Date = Date()
     
-    private let imagesBaseUrl = URL(string: "https://image.tmdb.org/t/p")!
+    private let imagesBaseUrl = URL(string: "https://image.tmdb.org")!
 }
 
 // MARK: - Image Sizing
@@ -51,11 +51,11 @@ extension Movie {
     }
     
     func posterUrl(size: PosterSize) -> URL? {
-        return URL(string: "\(size.rawValue)\(posterPath)", relativeTo: imagesBaseUrl)
+        return URL(string: "/t/p/\(size.rawValue)\(posterPath)", relativeTo: imagesBaseUrl)
     }
     
     func backdropUrl(size: BackdropSize) -> URL? {
-        return URL(string: "\(size.rawValue)\(backdropPath)", relativeTo: imagesBaseUrl)
+        return URL(string: "/t/p/\(size.rawValue)\(backdropPath)", relativeTo: imagesBaseUrl)
     }
 }
 
