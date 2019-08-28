@@ -15,6 +15,7 @@
 		C78B17C32316AE9F00D67BBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B17C12316AE9F00D67BBD /* LaunchScreen.storyboard */; };
 		C78B182E2316CF4A00D67BBD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B182C2316CF4A00D67BBD /* Movie.swift */; };
 		C78B182F2316CF4A00D67BBD /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B182D2316CF4A00D67BBD /* ResultPage.swift */; };
+		C78B18322316EA7700D67BBD /* TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B18312316EA7700D67BBD /* TMDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C78B17C42316AE9F00D67BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78B182C2316CF4A00D67BBD /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C78B182D2316CF4A00D67BBD /* ResultPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
+		C78B18312316EA7700D67BBD /* TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		C78B17B72316AE9F00D67BBD /* Cinephile */ = {
 			isa = PBXGroup;
 			children = (
+				C78B18302316EA7700D67BBD /* API */,
 				C78B182B2316CF4A00D67BBD /* Models */,
 				C78B17B82316AE9F00D67BBD /* AppDelegate.swift */,
 				C78B17BA2316AE9F00D67BBD /* ViewController.swift */,
@@ -100,6 +103,14 @@
 				C78B182D2316CF4A00D67BBD /* ResultPage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C78B18302316EA7700D67BBD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C78B18312316EA7700D67BBD /* TMDB.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			files = (
 				C78B17BB2316AE9F00D67BBD /* ViewController.swift in Sources */,
 				C78B17B92316AE9F00D67BBD /* AppDelegate.swift in Sources */,
+				C78B18322316EA7700D67BBD /* TMDB.swift in Sources */,
 				C78B182E2316CF4A00D67BBD /* Movie.swift in Sources */,
 				C78B182F2316CF4A00D67BBD /* ResultPage.swift in Sources */,
 			);

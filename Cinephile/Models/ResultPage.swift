@@ -12,13 +12,15 @@ import Arrow
 struct ResultPage {
     
     var results: [Movie] = []
-    var page: Int = 1
+    var page: Int = 0
     var totalResults: Int = 0
     var dateMax: Date?
     var dateMin: Date?
     var totalPages: Int = 0
     
 }
+
+// MARK: - ArrowParsable
 
 extension ResultPage: ArrowParsable {
     
