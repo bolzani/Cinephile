@@ -10,5 +10,5 @@ target "Cinephile" do
   pod "thenPromise", "5.0.0"
   pod "ws", "5.0.0"
   pod "Arrow", "5.0.0"
-  pod "SDWebImage", "5.1.0"
+  pod "SDWebImage", "5.1.0", :modular_headers => true
 end

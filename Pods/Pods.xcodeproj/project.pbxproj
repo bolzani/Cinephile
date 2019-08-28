@@ -14,35 +14,35 @@
 /* Begin PBXContainerItemProxy section */
 		28957A48C7FDF2B4DCBBF04CB0432054 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 378E6D7404E680313701F6050AB46BC7 /* ws.xcodeproj */;
+			containerPortal = 08656C2136DA0E1010A0A0F184CC16CF /* ws.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 448A4F85818EFFA72CD7E1694667F687;
 			remoteInfo = ws;
 		};
 		843A8DFD7D1686D4DB460246EB6E5BB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7FF46BCE269E7435A132885319E6C61 /* Arrow.xcodeproj */;
+			containerPortal = 08643A55ED27D56596183B4496D5CF3E /* Arrow.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 60E635DDB6D785E90886F89079A19FCB;
 			remoteInfo = Arrow;
 		};
 		B3DA9C70A400BAB4CE573931AC1479F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9E36A490896E1516202579CB4773A690 /* thenPromise.xcodeproj */;
+			containerPortal = 583B9A030C2DA5FBE860C39767790D3E /* thenPromise.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4AD1BEDF1330E8A96AEA28149661A723;
 			remoteInfo = thenPromise;
 		};
 		BC01ED3F6AD524D7050C8F07D0C2A59A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6DE93E75391CF15D09CD896C5A8F6A3D /* SDWebImage.xcodeproj */;
+			containerPortal = 40D8A108EAF0097588294E5A882D2356 /* SDWebImage.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4ECF4E662EEBE4FA58102FF984D920CC;
 			remoteInfo = SDWebImage;
 		};
 		F37B55DA7BCE841166BB35B7A49F7C25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CD009EF188316E6EC5301C85A2C9B8DD /* Alamofire.xcodeproj */;
+			containerPortal = 3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 81B7E9B7CD0CADA087A4BB042FBA92E7;
 			remoteInfo = Alamofire;
@@ -50,16 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08643A55ED27D56596183B4496D5CF3E /* Arrow */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Arrow; path = Arrow.xcodeproj; sourceTree = "<group>"; };
+		08656C2136DA0E1010A0A0F184CC16CF /* ws */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ws; path = ws.xcodeproj; sourceTree = "<group>"; };
 		21F0D41FA3A3273070A86112BAA0E2D5 /* Pods-Cinephile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cinephile-acknowledgements.markdown"; sourceTree = "<group>"; };
-		378E6D7404E680313701F6050AB46BC7 /* ws */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ws; path = ws.xcodeproj; sourceTree = "<group>"; };
-		6DE93E75391CF15D09CD896C5A8F6A3D /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage; path = SDWebImage.xcodeproj; sourceTree = "<group>"; };
+		3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		40D8A108EAF0097588294E5A882D2356 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage; path = SDWebImage.xcodeproj; sourceTree = "<group>"; };
+		583B9A030C2DA5FBE860C39767790D3E /* thenPromise */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = thenPromise; path = thenPromise.xcodeproj; sourceTree = "<group>"; };
 		757249FBA6B31650314319505214DCCC /* Pods-Cinephile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cinephile-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E36A490896E1516202579CB4773A690 /* thenPromise */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = thenPromise; path = thenPromise.xcodeproj; sourceTree = "<group>"; };
 		9E986831473283E69D3442F67F939012 /* Pods-Cinephile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cinephile.release.xcconfig"; sourceTree = "<group>"; };
 		A81A1B7DD733DBC0B0CBE9F383F6CADF /* libPods-Cinephile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cinephile.a"; path = "libPods-Cinephile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD009EF188316E6EC5301C85A2C9B8DD /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
-		D7FF46BCE269E7435A132885319E6C61 /* Arrow */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Arrow; path = Arrow.xcodeproj; sourceTree = "<group>"; };
 		DBDE3320430E7C4A69B8222C77CC9460 /* Pods-Cinephile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cinephile-dummy.m"; sourceTree = "<group>"; };
 		E04C003EC4A75C61C4AC4651722F119A /* Pods-Cinephile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cinephile.modulemap"; sourceTree = "<group>"; };
 		E4895929069E8CCE257B90988D45E435 /* Pods-Cinephile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cinephile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,24 +108,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C09DCD10F2C6AB5FCE35840D8FEB128D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CD009EF188316E6EC5301C85A2C9B8DD /* Alamofire */,
-				D7FF46BCE269E7435A132885319E6C61 /* Arrow */,
-				6DE93E75391CF15D09CD896C5A8F6A3D /* SDWebImage */,
-				9E36A490896E1516202579CB4773A690 /* thenPromise */,
-				378E6D7404E680313701F6050AB46BC7 /* ws */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				C09DCD10F2C6AB5FCE35840D8FEB128D /* Pods */,
+				FA67A7E439A8E7500F0C0FC75A8DD539 /* Pods */,
 				597ED49F30B203B5561A461F060D0E89 /* Products */,
 				41B9BB06CAEF54F0316D377BFEDA2B60 /* Targets Support Files */,
 			);
@@ -136,6 +124,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA67A7E439A8E7500F0C0FC75A8DD539 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */,
+				08643A55ED27D56596183B4496D5CF3E /* Arrow */,
+				40D8A108EAF0097588294E5A882D2356 /* SDWebImage */,
+				583B9A030C2DA5FBE860C39767790D3E /* thenPromise */,
+				08656C2136DA0E1010A0A0F184CC16CF /* ws */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,19 +195,19 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = CD009EF188316E6EC5301C85A2C9B8DD /* Alamofire */;
+					ProjectRef = 40D8A108EAF0097588294E5A882D2356 /* SDWebImage */;
 				},
 				{
-					ProjectRef = D7FF46BCE269E7435A132885319E6C61 /* Arrow */;
+					ProjectRef = 3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */;
 				},
 				{
-					ProjectRef = 6DE93E75391CF15D09CD896C5A8F6A3D /* SDWebImage */;
+					ProjectRef = 08643A55ED27D56596183B4496D5CF3E /* Arrow */;
 				},
 				{
-					ProjectRef = 9E36A490896E1516202579CB4773A690 /* thenPromise */;
+					ProjectRef = 583B9A030C2DA5FBE860C39767790D3E /* thenPromise */;
 				},
 				{
-					ProjectRef = 378E6D7404E680313701F6050AB46BC7 /* ws */;
+					ProjectRef = 08656C2136DA0E1010A0A0F184CC16CF /* ws */;
 				},
 			);
 			projectRoot = "";

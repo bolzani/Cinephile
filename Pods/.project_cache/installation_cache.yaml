@@ -16,11 +16,11 @@ CACHE_KEYS:
       - Arrow (5.0.0)
   Pods-Cinephile:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: a1b8787174239bb09613b1638ac30d23
-      Release: a1b8787174239bb09613b1638ac30d23
+      Debug: d5e7ef220ea5c6b80dc58f0bf0fc1f9f
+      Release: d5e7ef220ea5c6b80dc58f0bf0fc1f9f
   SDWebImage:
     BUILD_SETTINGS_CHECKSUM:
-      SDWebImage: 95424e9ff6a07051a5b7f92e42fe5e2f
+      SDWebImage: 66390aeef8aed1c50a10c8f58d88c5f3
     CHECKSUM: fb387001955223213dde14bc08c8b73f371f8d8f
     SPECS:
       - SDWebImage (5.1.0)
