@@ -18,6 +18,7 @@
 		C78B184B2317105C00D67BBD /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B184A2317105C00D67BBD /* MovieCollectionViewCell.swift */; };
 		C78B184D2317126B00D67BBD /* CollectionLayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B184C2317126B00D67BBD /* CollectionLayoutType.swift */; };
 		C78B184F231720BD00D67BBD /* MoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B184E231720BD00D67BBD /* MoviesCollectionViewController.swift */; };
+		C78B185123185A2E00D67BBD /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B185023185A2E00D67BBD /* MovieGenre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C78B184A2317105C00D67BBD /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		C78B184C2317126B00D67BBD /* CollectionLayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayoutType.swift; sourceTree = "<group>"; };
 		C78B184E231720BD00D67BBD /* MoviesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewController.swift; sourceTree = "<group>"; };
+		C78B185023185A2E00D67BBD /* MovieGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +92,12 @@
 			children = (
 				C78B18302316EA7700D67BBD /* API */,
 				C78B182B2316CF4A00D67BBD /* Models */,
+				C78B18492317103F00D67BBD /* MoviesCollectionView */,
 				C78B17B82316AE9F00D67BBD /* AppDelegate.swift */,
 				C78B17BC2316AE9F00D67BBD /* Main.storyboard */,
 				C78B17BF2316AE9F00D67BBD /* Assets.xcassets */,
 				C78B17C12316AE9F00D67BBD /* LaunchScreen.storyboard */,
 				C78B17C42316AE9F00D67BBD /* Info.plist */,
-				C78B18492317103F00D67BBD /* MoviesCollectionView */,
 			);
 			path = Cinephile;
 			sourceTree = "<group>";
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				C78B182C2316CF4A00D67BBD /* Movie.swift */,
+				C78B185023185A2E00D67BBD /* MovieGenre.swift */,
 				C78B182D2316CF4A00D67BBD /* ResultPage.swift */,
 			);
 			path = Models;
@@ -228,6 +231,7 @@
 				C78B184F231720BD00D67BBD /* MoviesCollectionViewController.swift in Sources */,
 				C78B17B92316AE9F00D67BBD /* AppDelegate.swift in Sources */,
 				C78B18322316EA7700D67BBD /* TMDB.swift in Sources */,
+				C78B185123185A2E00D67BBD /* MovieGenre.swift in Sources */,
 				C78B182E2316CF4A00D67BBD /* Movie.swift in Sources */,
 				C78B184B2317105C00D67BBD /* MovieCollectionViewCell.swift in Sources */,
 				C78B182F2316CF4A00D67BBD /* ResultPage.swift in Sources */,

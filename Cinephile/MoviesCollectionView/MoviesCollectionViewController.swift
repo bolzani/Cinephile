@@ -22,7 +22,7 @@ class MoviesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 //        navigationItem.rightBarButtonItem = listBarButtonItem
         collectionView.delaysContentTouches = false
-        loadMore()
+        loadMore()        
     }
     
     @objc func changeLayout() {

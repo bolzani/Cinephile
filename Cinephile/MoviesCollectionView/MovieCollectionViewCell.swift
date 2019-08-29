@@ -17,6 +17,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "MovieCollectionViewCell"
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var genresLabel: UILabel!
     private weak var layoutProvider: LayoutProvider?
     private var isPortrait: Bool { return UIDevice.current.orientation.isPortrait }
     
@@ -30,6 +31,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         imageView.sd_cancelCurrentImageLoad()
         imageView.image = nil
+        genresLabel.text = nil
     }
     
     func setup(with item: Movie, delegate: LayoutProvider) {
@@ -44,6 +46,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
             size = .w342
         }
         imageView.sd_setImage(with: item.posterUrl(size: size))
+
+        TMDB.genres().then({ genres in
+            let genresString = genres.filter{item.genreIds.contains($0.id)}.map({$0.name}).joined(separator: ", ")
+            self.genresLabel.text = genresString
+        })
     }
     
     //MARK:- Events

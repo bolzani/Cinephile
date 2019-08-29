@@ -18,22 +18,56 @@ enum TMDBError: Error {
 
 class TMDB {
     
+    // MARK: Private Properties
+    
     private static let baseUrl = "https://api.themoviedb.org"
     private static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
+    private static let requiredParameters: [String:Any] = ["api_key":apiKey, "language": "en-US"]
+    private static let movieGenresPromise: Promise<[MovieGenre]> = createMovieGenresPromise()
+    // MARK: Public Properties
+    
+//    static let genres: Promise<[MovieGenre]> = createMovieGenresPromise()
     
 }
 
-// MARK: - Public
+// MARK: - Public Methods
 
 extension TMDB {
     
     static func upcoming() -> PagedRequest {
-        return PagedRequest(WS(baseUrl).getRequest("/3/movie/upcoming", params: ["api_key":apiKey, "language": "en-US"]))
+        return PagedRequest(request(path: "/3/movie/upcoming"))
     }
     
     static func search(_ query: String) -> PagedRequest {
-        return PagedRequest(WS(baseUrl).getRequest("/3/search/movie", params: ["api_key":apiKey, "language": "en-US", "include_adult": false]))
+        return PagedRequest(request(path: "/3/search/movie", params: ["include_adult": false]))
     }
+    
+    static func genres() -> Promise<[MovieGenre]> {
+        return movieGenresPromise
+    }
+}
+
+// MARK: - Private Methods
+
+extension TMDB {
+    
+    private static func request(path: String, params extraParameters: [String:Any] = [:]) -> WSRequest {
+        let params = requiredParameters.merging(extraParameters, uniquingKeysWith: { return $1 })
+        return WS(baseUrl).getRequest(path, params: params)
+    }
+    
+    private static func createMovieGenresPromise() -> Promise<[MovieGenre]> {
+        return request(path: "/3/genre/movie/list")
+            .fetch()
+            .registerThen(parseGenres)
+            .resolveOnMainThread()
+    }
+    
+    private static func parseGenres(_ json: JSON) -> [MovieGenre] {
+        let genres = json["genres"]?.collection?.compactMap({MovieGenre($0)}) ?? []
+        return genres
+    }
+    
 }
 
 // MARK: - PagedRequest
@@ -42,15 +76,15 @@ class PagedRequest {
     
     var loading: Bool = false
     private var nextPage: Int = 1
-    private var call: WSRequest!
+    private var request: WSRequest!
     private var canLoadMore = true
     
-    init(_ aCall: WSRequest) {
-        call = aCall
+    init(_ aRequest: WSRequest) {
+        request = aRequest
     }
     
     func reset() {
-        call.cancel()
+        request.cancel()
         nextPage = 1
         canLoadMore = true
     }
@@ -67,11 +101,12 @@ class PagedRequest {
             return Promise.init(error: TMDBError.alreadyLoading)
         }
         loading = true
-        var params = call.params
+        var params = request.params
         params["page"] = nextPage
-        call.params = params
+        request.params = params
         nextPage += 1
-        return call.fetch()
+        return request
+            .fetch()
             .registerThen(parsePage)
             .resolveOnMainThread()
     }
