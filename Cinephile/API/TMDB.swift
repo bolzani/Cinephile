@@ -24,9 +24,7 @@ class TMDB {
     private static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
     private static let requiredParameters: [String:Any] = ["api_key":apiKey, "language": "en-US"]
     private static let movieGenresPromise: Promise<[MovieGenre]> = createMovieGenresPromise()
-    // MARK: Public Properties
-    
-//    static let genres: Promise<[MovieGenre]> = createMovieGenresPromise()
+
     
 }
 
@@ -44,6 +42,15 @@ extension TMDB {
     
     static func genres() -> Promise<[MovieGenre]> {
         return movieGenresPromise
+    }
+    
+    static func movie(_ id: Int) -> Promise<Movie> {
+        return request(path: "/3/movie/\(id)")
+            .fetch()
+            .registerThen { (json: JSON) -> Promise<Movie> in
+                let aMovie = Movie(json)!
+                return Promise.resolve(aMovie)
+        }.resolveOnMainThread()
     }
 }
 

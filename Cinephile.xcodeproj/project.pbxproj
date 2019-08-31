@@ -12,6 +12,7 @@
 		55A7489D231A107D0073B8D6 /* MoviePosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A74898231A107D0073B8D6 /* MoviePosterCell.xib */; };
 		55A7489E231A107D0073B8D6 /* MoviePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A74899231A107D0073B8D6 /* MoviePosterCell.swift */; };
 		55A7489F231A107D0073B8D6 /* MoviePostersLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7489B231A107D0073B8D6 /* MoviePostersLayout.swift */; };
+		55A748A2231A11410073B8D6 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A748A1231A11410073B8D6 /* MovieDetailsViewController.swift */; };
 		C78B17B92316AE9F00D67BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B17B82316AE9F00D67BBD /* AppDelegate.swift */; };
 		C78B17BE2316AE9F00D67BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B17BC2316AE9F00D67BBD /* Main.storyboard */; };
 		C78B17C02316AE9F00D67BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B17BF2316AE9F00D67BBD /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		55A74898231A107D0073B8D6 /* MoviePosterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePosterCell.xib; sourceTree = "<group>"; };
 		55A74899231A107D0073B8D6 /* MoviePosterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePosterCell.swift; sourceTree = "<group>"; };
 		55A7489B231A107D0073B8D6 /* MoviePostersLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePostersLayout.swift; sourceTree = "<group>"; };
+		55A748A1231A11410073B8D6 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		7DFCFEEB6FA06EA5EFD1F3D3 /* libPods-Cinephile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cinephile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78B17B52316AE9F00D67BBD /* Cinephile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinephile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78B17B82316AE9F00D67BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		55A748A0231A11260073B8D6 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				55A748A1231A11410073B8D6 /* MovieDetailsViewController.swift */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
 		82550784F9F727BD35DBF0C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 				C78B18302316EA7700D67BBD /* API */,
 				C78B182B2316CF4A00D67BBD /* Models */,
 				55A74895231A102A0073B8D6 /* MoviesList */,
+				55A748A0231A11260073B8D6 /* MovieDetails */,
 				C78B17B82316AE9F00D67BBD /* AppDelegate.swift */,
 				C78B17BC2316AE9F00D67BBD /* Main.storyboard */,
 				C78B17BF2316AE9F00D67BBD /* Assets.xcassets */,
@@ -249,6 +260,7 @@
 			files = (
 				C78B17B92316AE9F00D67BBD /* AppDelegate.swift in Sources */,
 				55A7489F231A107D0073B8D6 /* MoviePostersLayout.swift in Sources */,
+				55A748A2231A11410073B8D6 /* MovieDetailsViewController.swift in Sources */,
 				C78B18322316EA7700D67BBD /* TMDB.swift in Sources */,
 				C78B185123185A2E00D67BBD /* MovieGenre.swift in Sources */,
 				55A7489E231A107D0073B8D6 /* MoviePosterCell.swift in Sources */,

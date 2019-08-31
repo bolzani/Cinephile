@@ -25,6 +25,9 @@ struct Movie {
     var voteAverage: Double = 0
     var overview: String = ""
     var releaseDate: Date = Date()
+    var tagline: String = ""
+    var runtime: Int = 0
+    var genres: [MovieGenre] = []
     
     private let imagesBaseUrl = URL(string: "https://image.tmdb.org")!
 }
@@ -78,6 +81,9 @@ extension Movie: ArrowParsable {
         voteAverage <-- json["vote_average"]
         overview <-- json["overview"]
         releaseDate <-- json["release_date"]?.dateFormat("YYYY-MM-DD")
+        tagline <-- json["tagline"]
+        runtime <-- json["runtime"]
+        genres <-- json["genres"]
     }
     
 }

@@ -58,6 +58,19 @@ extension MoviesListViewController {
     
 }
 
+extension MoviesListViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let movie = movies[indexPath.row]
+        let details = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        details.movie = movie
+        navigationController?.pushViewController(details, animated: true)
+        
+    }
+    
+}
+
 // MARK: - Paging Logic
 
 extension MoviesListViewController {
