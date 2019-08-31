@@ -52,6 +52,18 @@ extension TMDB {
                 return Promise.resolve(aMovie)
         }.resolveOnMainThread()
     }
+    
+    static func similarMovies(_ id: Int) -> Promise<[Movie]> {
+        return request(path: "/3/movie/\(id)/similar")
+            .fetch()
+            .registerThen { (json: JSON) -> Promise<[Movie]> in
+                guard let page = ResultPage(json) else {
+                    return Promise.init([])
+                }
+                let movies = page.results
+                return Promise.init(movies)
+            }.resolveOnMainThread()
+    }
 }
 
 // MARK: - Private Methods

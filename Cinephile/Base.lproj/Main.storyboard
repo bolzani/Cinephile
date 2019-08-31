@@ -38,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="556.52173913043487" y="215.625"/>
         </scene>
-        <!--Movie Details View Controller-->
+        <!-- -->
         <scene sceneID="vW5-qN-u0k">
             <objects>
                 <viewController storyboardIdentifier="MovieDetailsViewController" id="Ylo-0A-V1x" customClass="MovieDetailsViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,6 +88,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-Rp-48f">
+                                        <rect key="frame" x="8" y="315" width="398" height="23"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action, Comedy, Drama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJM-TU-Cbd">
                                         <rect key="frame" x="116" y="261" width="290" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -100,9 +106,48 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagline" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-Rp-48f">
-                                        <rect key="frame" x="8" y="315" width="398" height="23"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wBs-S4-yZq">
+                                        <rect key="frame" x="0.0" y="640.5" width="414" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="f1o-Ij-sEI"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1en-TH-Ytj">
+                                            <size key="itemSize" width="100" height="150"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecomendationCell" id="2sP-3R-Mvt">
+                                                <rect key="frame" x="8" y="0.0" width="100" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-94-zNu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="vmY-94-zNu" firstAttribute="top" secondItem="2sP-3R-Mvt" secondAttribute="top" id="IG2-Fa-1Fm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vmY-94-zNu" secondAttribute="bottom" id="RpF-qF-fXP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vmY-94-zNu" secondAttribute="trailing" id="ZE1-n8-Qio"/>
+                                                    <constraint firstItem="vmY-94-zNu" firstAttribute="leading" secondItem="2sP-3R-Mvt" secondAttribute="leading" id="aRX-N3-OL8"/>
+                                                </constraints>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Ylo-0A-V1x" id="02b-Ld-8Jz"/>
+                                            <outlet property="delegate" destination="Ylo-0A-V1x" id="Qft-kC-MR3"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Movies" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Dl-Pu1">
+                                        <rect key="frame" x="8" y="601.5" width="398" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -110,22 +155,28 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="WJM-TU-Cbd" firstAttribute="leading" secondItem="aMv-8U-3Pn" secondAttribute="trailing" constant="8" id="0HI-zm-nHI"/>
+                                    <constraint firstItem="wBs-S4-yZq" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leading" id="3AO-1W-rPv"/>
+                                    <constraint firstItem="Ppm-Dl-Pu1" firstAttribute="trailing" secondItem="Y1J-Ko-ZGw" secondAttribute="trailingMargin" id="52m-dc-qUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="wBs-S4-yZq" secondAttribute="trailing" id="61T-O0-J42"/>
                                     <constraint firstItem="Gao-DY-btk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xQi-yn-D8b" secondAttribute="trailing" id="6Rs-Tk-Pmz"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="ySC-Rp-48f" secondAttribute="trailing" id="9Rh-1G-6TD"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="top" secondItem="Y1J-Ko-ZGw" secondAttribute="top" id="9fT-iA-G7I"/>
                                     <constraint firstItem="Ivc-VD-zod" firstAttribute="trailing" secondItem="Y1J-Ko-ZGw" secondAttribute="trailingMargin" id="ArH-zd-C7g"/>
+                                    <constraint firstAttribute="bottom" secondItem="wBs-S4-yZq" secondAttribute="bottom" id="BkU-k3-8Jk"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leading" id="CHO-we-pan"/>
                                     <constraint firstItem="xQi-yn-D8b" firstAttribute="leading" secondItem="aMv-8U-3Pn" secondAttribute="trailing" constant="8" id="DZ8-Pv-vzh"/>
                                     <constraint firstItem="ySC-Rp-48f" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leadingMargin" id="G4n-5C-Tmf"/>
                                     <constraint firstItem="aMv-8U-3Pn" firstAttribute="centerY" secondItem="PEv-Iv-4M3" secondAttribute="bottom" id="Gcc-3T-NJV"/>
+                                    <constraint firstItem="Ppm-Dl-Pu1" firstAttribute="top" secondItem="Ivc-VD-zod" secondAttribute="bottom" constant="8" id="H0o-m0-s64"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="WJM-TU-Cbd" secondAttribute="trailing" id="JmO-TP-crT"/>
                                     <constraint firstItem="WJM-TU-Cbd" firstAttribute="top" secondItem="xQi-yn-D8b" secondAttribute="bottom" constant="8" id="K8Z-Sh-nT7"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Ivc-VD-zod" secondAttribute="bottom" id="Kxs-6d-b21"/>
+                                    <constraint firstItem="Ppm-Dl-Pu1" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leadingMargin" id="LVi-hd-klF"/>
                                     <constraint firstItem="Ivc-VD-zod" firstAttribute="top" secondItem="ySC-Rp-48f" secondAttribute="bottom" constant="16" id="Nmg-uv-8bT"/>
                                     <constraint firstItem="Ivc-VD-zod" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leadingMargin" id="Tbi-he-q1W"/>
                                     <constraint firstItem="Gao-DY-btk" firstAttribute="top" secondItem="PEv-Iv-4M3" secondAttribute="bottom" constant="8" id="UNY-Rd-lwE"/>
                                     <constraint firstItem="aMv-8U-3Pn" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leadingMargin" id="UZW-QP-8qm"/>
                                     <constraint firstItem="ySC-Rp-48f" firstAttribute="top" secondItem="aMv-8U-3Pn" secondAttribute="bottom" constant="16" id="bZl-df-LzL"/>
+                                    <constraint firstItem="wBs-S4-yZq" firstAttribute="top" secondItem="Ppm-Dl-Pu1" secondAttribute="bottom" constant="16" id="df9-1D-4Oq"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Gao-DY-btk" secondAttribute="trailing" id="iz3-96-Uqj"/>
                                     <constraint firstItem="xQi-yn-D8b" firstAttribute="top" secondItem="PEv-Iv-4M3" secondAttribute="bottom" constant="8" id="rBz-oM-js2"/>
                                     <constraint firstAttribute="trailing" secondItem="PEv-Iv-4M3" secondAttribute="trailing" id="red-Ig-MxI"/>
@@ -142,14 +193,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="svs-vd-60u"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="PWv-Wa-XsR"/>
+                    <navigationItem key="navigationItem" title=" " largeTitleDisplayMode="always" id="PWv-Wa-XsR"/>
                     <connections>
                         <outlet property="backdrop" destination="PEv-Iv-4M3" id="5SL-UO-haw"/>
                         <outlet property="genres" destination="WJM-TU-Cbd" id="jeF-bZ-AWE"/>
                         <outlet property="overview" destination="Ivc-VD-zod" id="xAU-hK-Skl"/>
                         <outlet property="poster" destination="aMv-8U-3Pn" id="usx-r8-VhC"/>
+                        <outlet property="recommendationsCollection" destination="wBs-S4-yZq" id="DGv-pY-y8n"/>
                         <outlet property="releaseDate" destination="xQi-yn-D8b" id="AgK-NQ-ifC"/>
                         <outlet property="score" destination="Gao-DY-btk" id="Fjr-Nr-w1Z"/>
+                        <outlet property="similarTitle" destination="Ppm-Dl-Pu1" id="7bb-px-wMr"/>
                         <outlet property="tagline" destination="ySC-Rp-48f" id="LVb-YC-jQy"/>
                     </connections>
                 </viewController>
