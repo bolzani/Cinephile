@@ -101,8 +101,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gao-DY-btk">
-                                        <rect key="frame" x="381" y="232" width="25" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="377" y="232" width="29" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -145,6 +145,14 @@
                                             <outlet property="delegate" destination="Ylo-0A-V1x" id="Qft-kC-MR3"/>
                                         </connections>
                                     </collectionView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="NtA-k4-fOk">
+                                        <rect key="frame" x="353" y="232.5" width="20" height="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="bab-Lc-J3f"/>
+                                            <constraint firstAttribute="width" constant="20" id="vOm-bV-THj"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Movies" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-Dl-Pu1">
                                         <rect key="frame" x="8" y="601.5" width="398" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
@@ -160,11 +168,13 @@
                                     <constraint firstAttribute="trailing" secondItem="wBs-S4-yZq" secondAttribute="trailing" id="61T-O0-J42"/>
                                     <constraint firstItem="Gao-DY-btk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xQi-yn-D8b" secondAttribute="trailing" id="6Rs-Tk-Pmz"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="ySC-Rp-48f" secondAttribute="trailing" id="9Rh-1G-6TD"/>
+                                    <constraint firstItem="NtA-k4-fOk" firstAttribute="centerY" secondItem="Gao-DY-btk" secondAttribute="centerY" id="9fT-eQ-Uec"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="top" secondItem="Y1J-Ko-ZGw" secondAttribute="top" id="9fT-iA-G7I"/>
                                     <constraint firstItem="Ivc-VD-zod" firstAttribute="trailing" secondItem="Y1J-Ko-ZGw" secondAttribute="trailingMargin" id="ArH-zd-C7g"/>
                                     <constraint firstAttribute="bottom" secondItem="wBs-S4-yZq" secondAttribute="bottom" id="BkU-k3-8Jk"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leading" id="CHO-we-pan"/>
                                     <constraint firstItem="xQi-yn-D8b" firstAttribute="leading" secondItem="aMv-8U-3Pn" secondAttribute="trailing" constant="8" id="DZ8-Pv-vzh"/>
+                                    <constraint firstItem="Gao-DY-btk" firstAttribute="leading" secondItem="NtA-k4-fOk" secondAttribute="trailing" constant="4" id="FKc-OI-hz0"/>
                                     <constraint firstItem="ySC-Rp-48f" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leadingMargin" id="G4n-5C-Tmf"/>
                                     <constraint firstItem="aMv-8U-3Pn" firstAttribute="centerY" secondItem="PEv-Iv-4M3" secondAttribute="bottom" id="Gcc-3T-NJV"/>
                                     <constraint firstItem="Ppm-Dl-Pu1" firstAttribute="top" secondItem="Ivc-VD-zod" secondAttribute="bottom" constant="8" id="H0o-m0-s64"/>
@@ -238,4 +248,7 @@
             <point key="canvasLocation" x="556.52173913043487" y="-535.04464285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" width="30" height="30"/>
+    </resources>
 </document>

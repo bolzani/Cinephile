@@ -37,7 +37,7 @@ extension TMDB {
     }
     
     static func search(_ query: String) -> PagedRequest {
-        return PagedRequest(request(path: "/3/search/movie", params: ["include_adult": false]))
+        return PagedRequest(request(path: "/3/search/movie", params: ["include_adult": false, "query": query]))
     }
     
     static func genres() -> Promise<[MovieGenre]> {

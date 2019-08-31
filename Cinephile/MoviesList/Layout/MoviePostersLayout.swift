@@ -20,7 +20,7 @@ class MoviePostersLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = 8
         sectionInset = UIEdgeInsets(top: minimumInteritemSpacing, left: minimumInteritemSpacing, bottom: minimumInteritemSpacing, right: minimumInteritemSpacing)
     }
-    
+        
     override var itemSize: CGSize {
         get { return calculateItemSize()  }
         set {}
