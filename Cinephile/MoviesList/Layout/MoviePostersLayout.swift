@@ -36,7 +36,7 @@ class MoviePostersLayout: UICollectionViewFlowLayout {
             screenHeight -= (collectionView!.safeAreaInsets.top + collectionView!.safeAreaInsets.bottom)
         }
         
-        let isPortrait = UIDevice.current.orientation.isPortrait
+        let isPortrait = !UIDevice.current.orientation.isLandscape
         var width: CGFloat
         var height: CGFloat
         
