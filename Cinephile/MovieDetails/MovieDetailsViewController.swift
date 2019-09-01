@@ -29,7 +29,7 @@ class MovieDetailsViewController: UIViewController {
         navigationItem.title = movie.title
         tagline.text = nil
         overview.text = nil
-        score.text = nil
+        genres.text = nil
         similarTitle.isHidden = true
         TMDB.movie(movie.id).then(fillDetails)
         TMDB.similarMovies(movie.id).then(showRecommendations)

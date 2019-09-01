@@ -170,11 +170,13 @@ extension MoviesListViewController: UISearchResultsUpdating {
         currentSearch = newSearch
         search?.reset()
         searchResults.removeAll()
-        collectionView.setContentOffset(CGPoint(x: 0, y: -100), animated: false)
         collectionView.reloadSections([0])
-        collectionView.collectionViewLayout.invalidateLayout()
-        search = TMDB.search(newSearch)
-        loadMore()
+        if (!isSearching) {
+            collectionView.setContentOffset(CGPoint(x: 0, y: -100), animated: false)
+        } else {
+            search = TMDB.search(newSearch)
+            loadMore()
+        }
     }
     
 }
