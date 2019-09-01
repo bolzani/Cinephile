@@ -30,4 +30,4 @@ It also allows you to search for any movie.
 
 ![](screenshots/upcoming_movies.png?raw=true "Upcoming movies listing") ![](screenshots/movie_details.png?raw=true "Movie details") ![](screenshots/search.png?raw=true "Searching")
 
-![](screenshots/landscape?raw=true "Landscape orientation")
+![](screenshots/landscape.png?raw=true "Landscape orientation")
