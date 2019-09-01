@@ -138,7 +138,7 @@
                                             <size key="itemSize" width="100" height="150"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecomendationCell" id="2sP-3R-Mvt">
@@ -150,10 +150,11 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmY-94-zNu">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
                                                 </view>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="vmY-94-zNu" firstAttribute="top" secondItem="2sP-3R-Mvt" secondAttribute="top" id="IG2-Fa-1Fm"/>
                                                     <constraint firstAttribute="bottom" secondItem="vmY-94-zNu" secondAttribute="bottom" id="RpF-qF-fXP"/>
@@ -193,7 +194,7 @@
                                     <constraint firstItem="NtA-k4-fOk" firstAttribute="centerY" secondItem="Gao-DY-btk" secondAttribute="centerY" id="9fT-eQ-Uec"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="top" secondItem="Y1J-Ko-ZGw" secondAttribute="top" id="9fT-iA-G7I"/>
                                     <constraint firstItem="Ivc-VD-zod" firstAttribute="trailing" secondItem="Y1J-Ko-ZGw" secondAttribute="trailingMargin" id="ArH-zd-C7g"/>
-                                    <constraint firstAttribute="bottom" secondItem="wBs-S4-yZq" secondAttribute="bottom" id="BkU-k3-8Jk"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="wBs-S4-yZq" secondAttribute="bottom" id="BkU-k3-8Jk"/>
                                     <constraint firstItem="PEv-Iv-4M3" firstAttribute="leading" secondItem="Y1J-Ko-ZGw" secondAttribute="leading" id="CHO-we-pan"/>
                                     <constraint firstItem="xQi-yn-D8b" firstAttribute="leading" secondItem="aMv-8U-3Pn" secondAttribute="trailing" constant="8" id="DZ8-Pv-vzh"/>
                                     <constraint firstItem="Gao-DY-btk" firstAttribute="leading" secondItem="NtA-k4-fOk" secondAttribute="trailing" constant="4" id="FKc-OI-hz0"/>

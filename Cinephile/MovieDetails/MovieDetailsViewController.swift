@@ -31,18 +31,20 @@ class MovieDetailsViewController: UIViewController {
         overview.text = nil
         genres.text = nil
         similarTitle.isHidden = true
-        TMDB.movie(movie.id).then(fillDetails)
-        TMDB.similarMovies(movie.id).then(showRecommendations)
-        poster.sd_setImage(with: movie.posterUrl(size: .w154))
-        backdrop.sd_setImage(with: movie.backdropUrl(size: .w780))
         
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         releaseDate.text = formatter.string(from: movie.releaseDate)
         score.text = "\(movie.voteAverage)"
+
+        poster.sd_setImage(with: movie.posterUrl(size: .w154))
+        backdrop.sd_setImage(with: movie.backdropUrl(size: .w780))
+        
+        TMDB.movie(movie.id).then(fillExtraInformation)
+        TMDB.similarMovies(movie.id).then(showRecommendations)
     }
     
-    func fillDetails(_ movie: Movie) {
+    func fillExtraInformation(_ movie: Movie) {
         tagline.text = movie.tagline
         genres.text = movie.genres.map({$0.name}).joined(separator: ", ")
         overview.text = movie.overview

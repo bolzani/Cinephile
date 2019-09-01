@@ -77,8 +77,8 @@
 		55A74897231A107D0073B8D6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				55A74898231A107D0073B8D6 /* MoviePosterCell.xib */,
 				55A74899231A107D0073B8D6 /* MoviePosterCell.swift */,
+				55A74898231A107D0073B8D6 /* MoviePosterCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

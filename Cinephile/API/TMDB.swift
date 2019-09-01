@@ -25,7 +25,6 @@ class TMDB {
     private static let requiredParameters: [String:Any] = ["api_key":apiKey, "language": "en-US"]
     private static let movieGenresPromise: Promise<[MovieGenre]> = createMovieGenresPromise()
 
-    
 }
 
 // MARK: - Public Methods

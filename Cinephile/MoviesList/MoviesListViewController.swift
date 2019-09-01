@@ -10,18 +10,24 @@ import UIKit
 
 class MoviesListViewController: UIViewController {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    var movies: [Movie] = []
-    var searchResults: [Movie] = []
+    // MARK: Properties
+    
+    var upcomingMovies: [Movie] = []
+    var searchResultMovies: [Movie] = []
     var isSearching: Bool { return searchController.isActive }
     
-    var request: PagedRequest = TMDB.upcoming()
-    var search: PagedRequest?
+    var upcomingRequest: PagedRequest = TMDB.upcoming()
+    var searchRequest: PagedRequest?
+    
     var searchController: UISearchController!
     var currentSearch: String?
     
+    // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +45,22 @@ class MoviesListViewController: UIViewController {
         super.viewDidAppear(animated)
         navigationItem.hidesSearchBarWhenScrolling = true
     }
+        
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        flowLayout.scrollDirection = UIDevice.current.orientation.isLandscape ? .horizontal : .vertical
+        coordinator.animate( alongsideTransition: { _ in
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }, completion: nil)
+    }
+    
+}
+
+// MARK: - View setup
+
+extension MoviesListViewController {
     
     func setupCollectionView() {
         let layout = MoviePostersLayout()
@@ -58,16 +80,6 @@ class MoviesListViewController: UIViewController {
         navigationItem.searchController = searchController
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        flowLayout.scrollDirection = UIDevice.current.orientation.isLandscape ? .horizontal : .vertical
-        coordinator.animate( alongsideTransition: { _ in
-            self.collectionView.collectionViewLayout.invalidateLayout()
-        }, completion: nil)
-    }
-    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -80,14 +92,14 @@ extension MoviesListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isSearching {
-            return searchResults.count
+            return searchResultMovies.count
         } else {
-            return movies.count
+            return upcomingMovies.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let movie = isSearching ? searchResults[indexPath.row] : movies[indexPath.row]
+        let movie = isSearching ? searchResultMovies[indexPath.row] : upcomingMovies[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviePosterCell.identifier, for: indexPath) as! MoviePosterCell
         cell.setup(with: movie)
         return cell
@@ -95,10 +107,12 @@ extension MoviesListViewController: UICollectionViewDataSource {
     
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension MoviesListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movie = isSearching ? searchResults[indexPath.row] : movies[indexPath.row]
+        let movie = isSearching ? searchResultMovies[indexPath.row] : upcomingMovies[indexPath.row]
         let details = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         details.movie = movie
         navigationController?.pushViewController(details, animated: true)
@@ -112,11 +126,11 @@ extension MoviesListViewController: UIScrollViewDelegate {
     
     func loadMore() {
         if isSearching {
-            search?
+            searchRequest?
                 .loadNextPage()
                 .then(insertMovies)
         } else {
-            request
+            upcomingRequest
                 .loadNextPage()
                 .then(insertMovies)
         }
@@ -125,9 +139,9 @@ extension MoviesListViewController: UIScrollViewDelegate {
     func insertMovies(_ newMovies: [Movie]) {
         let indexes = calculateNewIndexPaths(newMovies)
         if isSearching {
-            searchResults.append(contentsOf: newMovies)
+            searchResultMovies.append(contentsOf: newMovies)
         } else {
-            movies.append(contentsOf: newMovies)
+            upcomingMovies.append(contentsOf: newMovies)
         }
         spinner.stopAnimating()
         collectionView.performBatchUpdates({
@@ -136,7 +150,7 @@ extension MoviesListViewController: UIScrollViewDelegate {
     }
     
     func calculateNewIndexPaths(_ newMovies: [Movie]) -> [IndexPath] {
-        let firstIndex = isSearching ? searchResults.count : movies.count
+        let firstIndex = isSearching ? searchResultMovies.count : upcomingMovies.count
         let lastIndex = firstIndex + newMovies.count
         let indexes = (firstIndex..<lastIndex).map({IndexPath(row: $0, section: 0)})
         return indexes
@@ -148,11 +162,11 @@ extension MoviesListViewController: UIScrollViewDelegate {
         
         if offsetY > contentHeight - scrollView.frame.height * 1.1 {
             if isSearching {
-                if search?.hasMoreToLoad() ?? false {
+                if searchRequest?.hasMoreToLoad() ?? false {
                     loadMore()
                 }
             } else {
-                if request.hasMoreToLoad() {
+                if upcomingRequest.hasMoreToLoad() {
                     loadMore()
                 }
             }
@@ -171,13 +185,13 @@ extension MoviesListViewController: UISearchResultsUpdating {
             return
         }
         currentSearch = newSearch
-        search?.reset()
-        searchResults.removeAll()
+        searchRequest?.reset()
+        searchResultMovies.removeAll()
         collectionView.reloadSections([0])
         if (!isSearching) {
             collectionView.setContentOffset(CGPoint(x: 0, y: -100), animated: false)
         } else {
-            search = TMDB.search(newSearch)
+            searchRequest = TMDB.search(newSearch)
             loadMore()
         }
     }
