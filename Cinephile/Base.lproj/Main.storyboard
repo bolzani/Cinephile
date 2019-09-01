@@ -11,30 +11,52 @@
     </dependencies>
     <scenes>
         <!--Upcoming Movies-->
-        <scene sceneID="Hql-Sl-z2W">
+        <scene sceneID="Bnw-aQ-iAx">
             <objects>
-                <collectionViewController id="4nG-5u-6q5" customClass="MoviesListViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4wp-kw-FQE">
+                <viewController id="oMR-wb-yA0" customClass="MoviesListViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d6o-fw-o1u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ToR-hd-DhP">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="4nG-5u-6q5" id="beE-D1-e6z"/>
-                            <outlet property="delegate" destination="4nG-5u-6q5" id="l8Q-U4-Mla"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Upcoming Movies" id="O76-wk-diO">
-                        <barButtonItem key="backBarButtonItem" title=" " id="bpR-SY-E7b"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IzP-s0-xio">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NKp-IC-oG7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oMR-wb-yA0" id="uRn-PG-ss4"/>
+                                    <outlet property="delegate" destination="oMR-wb-yA0" id="045-zO-3eX"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bha-tW-paX">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IzP-s0-xio" firstAttribute="leading" secondItem="bE9-aK-3t4" secondAttribute="leading" id="2gw-Vq-J0V"/>
+                            <constraint firstItem="bha-tW-paX" firstAttribute="centerY" secondItem="d6o-fw-o1u" secondAttribute="centerY" id="9Zc-dU-k1v"/>
+                            <constraint firstAttribute="bottom" secondItem="IzP-s0-xio" secondAttribute="bottom" id="Gp5-zo-Bow"/>
+                            <constraint firstItem="bha-tW-paX" firstAttribute="centerX" secondItem="d6o-fw-o1u" secondAttribute="centerX" id="YC7-xb-tdR"/>
+                            <constraint firstItem="IzP-s0-xio" firstAttribute="trailing" secondItem="bE9-aK-3t4" secondAttribute="trailing" id="gbT-q3-yy0"/>
+                            <constraint firstItem="IzP-s0-xio" firstAttribute="top" secondItem="d6o-fw-o1u" secondAttribute="top" id="lVX-fM-alK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bE9-aK-3t4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upcoming Movies" id="yV3-g9-ACg">
+                        <barButtonItem key="backBarButtonItem" title=" " id="VIJ-FY-W2U"/>
                     </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e00-7B-ysi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="collectionView" destination="IzP-s0-xio" id="XVl-dS-J3t"/>
+                        <outlet property="spinner" destination="bha-tW-paX" id="xQG-tI-zBS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6c-Sl-oTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="556.52173913043487" y="215.625"/>
         </scene>
@@ -240,12 +262,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4nG-5u-6q5" kind="relationship" relationship="rootViewController" id="CXA-sV-P5z"/>
+                        <segue destination="oMR-wb-yA0" kind="relationship" relationship="rootViewController" id="9Zd-dl-3Gc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBf-2P-6hE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="-535.04464285714278"/>
+            <point key="canvasLocation" x="558" y="-488"/>
         </scene>
     </scenes>
     <resources>

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class MoviesListViewController: UICollectionViewController {
+class MoviesListViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     var movies: [Movie] = []
     var searchResults: [Movie] = []
     var isSearching: Bool { return searchController.isActive }
@@ -50,6 +53,7 @@ class MoviesListViewController: UICollectionViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.tintColor = .white
         definesPresentationContext = true
         navigationItem.searchController = searchController
     }
@@ -68,13 +72,13 @@ class MoviesListViewController: UICollectionViewController {
 
 // MARK: - UICollectionViewDataSource
 
-extension MoviesListViewController {
+extension MoviesListViewController: UICollectionViewDataSource {
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isSearching {
             return searchResults.count
         } else {
@@ -82,7 +86,7 @@ extension MoviesListViewController {
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let movie = isSearching ? searchResults[indexPath.row] : movies[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviePosterCell.identifier, for: indexPath) as! MoviePosterCell
         cell.setup(with: movie)
@@ -91,9 +95,9 @@ extension MoviesListViewController {
     
 }
 
-extension MoviesListViewController {
+extension MoviesListViewController: UICollectionViewDelegate {
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movie = isSearching ? searchResults[indexPath.row] : movies[indexPath.row]
         let details = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         details.movie = movie
@@ -104,7 +108,7 @@ extension MoviesListViewController {
 
 // MARK: - Paging Logic
 
-extension MoviesListViewController {
+extension MoviesListViewController: UIScrollViewDelegate {
     
     func loadMore() {
         if isSearching {
@@ -116,7 +120,6 @@ extension MoviesListViewController {
                 .loadNextPage()
                 .then(insertMovies)
         }
-        
     }
     
     func insertMovies(_ newMovies: [Movie]) {
@@ -126,7 +129,7 @@ extension MoviesListViewController {
         } else {
             movies.append(contentsOf: newMovies)
         }
-        
+        spinner.stopAnimating()
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: indexes)
         })
@@ -139,7 +142,7 @@ extension MoviesListViewController {
         return indexes
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
