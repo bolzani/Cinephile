@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29F09FB6609BA4B98359D9403D8D582E /* Pods-Cinephile-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDE3320430E7C4A69B8222C77CC9460 /* Pods-Cinephile-dummy.m */; };
+		D7AA8A80ECBD4ED6A71E4B37D4CC3997 /* Pods-Cinephile-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 757249FBA6B31650314319505214DCCC /* Pods-Cinephile-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28957A48C7FDF2B4DCBBF04CB0432054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08656C2136DA0E1010A0A0F184CC16CF /* ws.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 448A4F85818EFFA72CD7E1694667F687;
+			remoteInfo = ws;
+		};
+		843A8DFD7D1686D4DB460246EB6E5BB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08643A55ED27D56596183B4496D5CF3E /* Arrow.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60E635DDB6D785E90886F89079A19FCB;
+			remoteInfo = Arrow;
+		};
+		B3DA9C70A400BAB4CE573931AC1479F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583B9A030C2DA5FBE860C39767790D3E /* thenPromise.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AD1BEDF1330E8A96AEA28149661A723;
+			remoteInfo = thenPromise;
+		};
+		BC01ED3F6AD524D7050C8F07D0C2A59A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40D8A108EAF0097588294E5A882D2356 /* SDWebImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ECF4E662EEBE4FA58102FF984D920CC;
+			remoteInfo = SDWebImage;
+		};
+		F37B55DA7BCE841166BB35B7A49F7C25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 81B7E9B7CD0CADA087A4BB042FBA92E7;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08643A55ED27D56596183B4496D5CF3E /* Arrow */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Arrow; path = Arrow.xcodeproj; sourceTree = "<group>"; };
+		08656C2136DA0E1010A0A0F184CC16CF /* ws */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ws; path = ws.xcodeproj; sourceTree = "<group>"; };
+		21F0D41FA3A3273070A86112BAA0E2D5 /* Pods-Cinephile-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cinephile-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		40D8A108EAF0097588294E5A882D2356 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage; path = SDWebImage.xcodeproj; sourceTree = "<group>"; };
+		583B9A030C2DA5FBE860C39767790D3E /* thenPromise */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = thenPromise; path = thenPromise.xcodeproj; sourceTree = "<group>"; };
+		757249FBA6B31650314319505214DCCC /* Pods-Cinephile-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cinephile-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E986831473283E69D3442F67F939012 /* Pods-Cinephile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cinephile.release.xcconfig"; sourceTree = "<group>"; };
+		A81A1B7DD733DBC0B0CBE9F383F6CADF /* libPods-Cinephile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Cinephile.a"; path = "libPods-Cinephile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBDE3320430E7C4A69B8222C77CC9460 /* Pods-Cinephile-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cinephile-dummy.m"; sourceTree = "<group>"; };
+		E04C003EC4A75C61C4AC4651722F119A /* Pods-Cinephile.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cinephile.modulemap"; sourceTree = "<group>"; };
+		E4895929069E8CCE257B90988D45E435 /* Pods-Cinephile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cinephile.debug.xcconfig"; sourceTree = "<group>"; };
+		F837A7E0158DA72260B662FB2D7E14F6 /* Pods-Cinephile-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cinephile-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B9268EC0413AFEB157930C925BE1016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E809EFF0A35ADAD036BE3F5F20A36F /* Pods-Cinephile */ = {
+			isa = PBXGroup;
+			children = (
+				E04C003EC4A75C61C4AC4651722F119A /* Pods-Cinephile.modulemap */,
+				21F0D41FA3A3273070A86112BAA0E2D5 /* Pods-Cinephile-acknowledgements.markdown */,
+				F837A7E0158DA72260B662FB2D7E14F6 /* Pods-Cinephile-acknowledgements.plist */,
+				DBDE3320430E7C4A69B8222C77CC9460 /* Pods-Cinephile-dummy.m */,
+				757249FBA6B31650314319505214DCCC /* Pods-Cinephile-umbrella.h */,
+				E4895929069E8CCE257B90988D45E435 /* Pods-Cinephile.debug.xcconfig */,
+				9E986831473283E69D3442F67F939012 /* Pods-Cinephile.release.xcconfig */,
+			);
+			name = "Pods-Cinephile";
+			path = "Target Support Files/Pods-Cinephile";
+			sourceTree = "<group>";
+		};
+		41B9BB06CAEF54F0316D377BFEDA2B60 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E809EFF0A35ADAD036BE3F5F20A36F /* Pods-Cinephile */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		597ED49F30B203B5561A461F060D0E89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A81A1B7DD733DBC0B0CBE9F383F6CADF /* libPods-Cinephile.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				FA67A7E439A8E7500F0C0FC75A8DD539 /* Pods */,
+				597ED49F30B203B5561A461F060D0E89 /* Products */,
+				41B9BB06CAEF54F0316D377BFEDA2B60 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA67A7E439A8E7500F0C0FC75A8DD539 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */,
+				08643A55ED27D56596183B4496D5CF3E /* Arrow */,
+				40D8A108EAF0097588294E5A882D2356 /* SDWebImage */,
+				583B9A030C2DA5FBE860C39767790D3E /* thenPromise */,
+				08656C2136DA0E1010A0A0F184CC16CF /* ws */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C140B5E3B5B343B8CDDE9093382289CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7AA8A80ECBD4ED6A71E4B37D4CC3997 /* Pods-Cinephile-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EFF88A98280F2DBDC1FBEC82292D9C3 /* Pods-Cinephile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6A6F309385137ECDDF57AC49D48FDDA /* Build configuration list for PBXNativeTarget "Pods-Cinephile" */;
+			buildPhases = (
+				C140B5E3B5B343B8CDDE9093382289CC /* Headers */,
+				BD5ACA066535FF4BB98981E4DA12AB4A /* Sources */,
+				4B9268EC0413AFEB157930C925BE1016 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A04FA8142F810A59AF77CAE3F64B1AC1 /* PBXTargetDependency */,
+				B2B3949EE4AEA98C9ABCFC859AC150D1 /* PBXTargetDependency */,
+				3EF65D4A076393FB4E77C0C7227FD6F3 /* PBXTargetDependency */,
+				BEF91B2291981F1DA7E758ABD344C9CE /* PBXTargetDependency */,
+				EB6F14AC1117E1B4438501EB43D20294 /* PBXTargetDependency */,
+			);
+			name = "Pods-Cinephile";
+			productName = "Pods-Cinephile";
+			productReference = A81A1B7DD733DBC0B0CBE9F383F6CADF /* libPods-Cinephile.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 597ED49F30B203B5561A461F060D0E89 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = 40D8A108EAF0097588294E5A882D2356 /* SDWebImage */;
+				},
+				{
+					ProjectRef = 3F4127939CF29883BBCE3EA2F6E956E6 /* Alamofire */;
+				},
+				{
+					ProjectRef = 08643A55ED27D56596183B4496D5CF3E /* Arrow */;
+				},
+				{
+					ProjectRef = 583B9A030C2DA5FBE860C39767790D3E /* thenPromise */;
+				},
+				{
+					ProjectRef = 08656C2136DA0E1010A0A0F184CC16CF /* ws */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3EFF88A98280F2DBDC1FBEC82292D9C3 /* Pods-Cinephile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD5ACA066535FF4BB98981E4DA12AB4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F09FB6609BA4B98359D9403D8D582E /* Pods-Cinephile-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EF65D4A076393FB4E77C0C7227FD6F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			targetProxy = BC01ED3F6AD524D7050C8F07D0C2A59A /* PBXContainerItemProxy */;
+		};
+		A04FA8142F810A59AF77CAE3F64B1AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = F37B55DA7BCE841166BB35B7A49F7C25 /* PBXContainerItemProxy */;
+		};
+		B2B3949EE4AEA98C9ABCFC859AC150D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Arrow;
+			targetProxy = 843A8DFD7D1686D4DB460246EB6E5BB8 /* PBXContainerItemProxy */;
+		};
+		BEF91B2291981F1DA7E758ABD344C9CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = thenPromise;
+			targetProxy = B3DA9C70A400BAB4CE573931AC1479F0 /* PBXContainerItemProxy */;
+		};
+		EB6F14AC1117E1B4438501EB43D20294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ws;
+			targetProxy = 28957A48C7FDF2B4DCBBF04CB0432054 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3C179B5EE3AC4F1124D5A733CD310608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E986831473283E69D3442F67F939012 /* Pods-Cinephile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cinephile/Pods-Cinephile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B32EA617D17E56CA04A62FDBCDB44CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4895929069E8CCE257B90988D45E435 /* Pods-Cinephile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Cinephile/Pods-Cinephile.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				196DFA3E4A09A28224918543529A1885 /* Debug */,
+				B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6A6F309385137ECDDF57AC49D48FDDA /* Build configuration list for PBXNativeTarget "Pods-Cinephile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32EA617D17E56CA04A62FDBCDB44CEE /* Debug */,
+				3C179B5EE3AC4F1124D5A733CD310608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,6 @@
+module then {
+  umbrella header "thenPromise-umbrella.h"
+
+  export *
+  module * { export * }
+}
